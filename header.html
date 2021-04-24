@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Matrixcraft</title>
+
+    <link href="/favicon.ico" rel="icon"/>
+    <link href="/favicon.ico" rel="shortcut icon">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="#00ff00" name="theme-color"/>
+    <meta charset="utf-8">
+
+    <meta content="/favicon.ico" property="twitter:image">
+    <meta content="/favicon.ico" property="og:image">
+    <meta content="/favicon.ico" property="og:image:secure_url">
+
+    <meta content="MatrixCraft" property="og:title"/>
+    <meta content="MatrixCraft" property="twitter:title"/>
+    <meta content="MatrixCraft" name="application-name"/>
+    <meta content="MatrixCraft" name="apple-mobile-web-app-title"/>
+
+    <meta content="MatrixCraft server website" name="description"/>
+    <meta content="MatrixCraft server website" property="og:description"/>
+    <meta content="MatrixCraft server website" property="twitter:description"/>
+
+    <meta content="website" property="og:type"/>
+    <meta content="https://mxsmp.com/" property="og:url"/>
+    <meta content="summary" property="twitter:card">
+
+    <meta content="website" property="og:type">
+    <meta content="32" property="og:image:width">
+    <meta content="32" property="og:image:height">
+
+    <link href="/style.css" rel="stylesheet" type="text/css"/>
+    <script>
+
+        function notBlocked() {
+            document.getElementById("discord_div").removeChild(document.getElementById("blockCheck"));
+        }
+
+        function blocked() {
+            document.getElementById("discord_div").innerHTML = '<b style="color: red;">Discord is blocked :(</b>';
+        }
+    </script>
+</head>
+<body>
+<video autoplay id="bg_video" loop muted>
+    <source src="/Images/bg1.mp4" type="video/mp4">
+</video>
+
+<div class="main_top round">
+    <div><h1 class="title_big"><a href="/">MatrixCraft</a></h1></div>
+    <div class="navbar"><h1>
+        <a href="/plugins.php">Plugins</a>
+        <a href="/tools.php">Tools</a>
+        <a href="/whitelist.php">Whitelist</a>
+        <span id="nav_nowrap">
+        <a href="/pictures.php">Pictures</a>
+        <a href="/Dynmap.php">Server Map</a></span>
+    </h1></div>
+</div>
+<div id="right">
+    <div id="right_small">
+        <div class="round" id="server_ip" onclick="navigator.clipboard.writeText('matrixcraft.us');">
+            <h3 style="margin: 2px;"><b>Server IP:</b></h3>
+            <b>MatrixCraft.us</b>
+            <h6 style="margin: 0;"><i>(click to copy)</i></h6>
+        </div>
+        <div class="page_text round" id="info">
+            <h3>Server updated to 1.16.5!</h3>
+            <h4>Have fun!</h4>
+        </div>
+    </div>
+    <div id="discord_div">
+        <iframe id="discord" src="https://discordapp.com/widget?id=276729442016034816&theme=dark"
+                style="border:0;" title="Discord"></iframe>
+        <img alt="" id="blockCheck" onerror="blocked();" onload="notBlocked();"
+             src="https://discord.com/assets/07dca80a102d4149e9736d4b162cff6f.ico" style="display: none">
+
+    </div>
+</div>
+
+
+<div id="main">
